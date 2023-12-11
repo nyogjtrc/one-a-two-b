@@ -1,0 +1,10 @@
+stages:
+  - test
+
+go-test:
+  image: golang:1.21
+  stage: test
+  before_script:
+    - go version
+  script:
+    - go test ./...
